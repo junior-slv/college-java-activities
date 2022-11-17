@@ -23,18 +23,23 @@ public class Projeto {
         return horas;
     }
     public void setNome(String nome){
-        if(!nome.equals("") || nome != null){
+        if (nome.equals("") || nome == null){
+            System.out.println("Insira um nome valido!");
+        } else{
             this.nome = nome;
         }
     }
     public void setCustoHora(double custoHora){
-        if(custoHora > 0 ){
+        if (custoHora <= 0 ){
+            System.out.println("O valor deve ser superior a 0!");
+        } else{
             this.custoHora = custoHora;
         }
     }
     public void registrarHoras(int horas){
-        if(horas > 0){
-
+        if (horas <= 0){
+            System.out.println("O valor deve ser superior a 0!");
+        } else{
             this.horas += horas;
         }
     }
