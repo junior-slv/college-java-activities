@@ -6,13 +6,15 @@ import java.util.Scanner;
 
 public class usaProjeto {
     public static void main(String[] args) {
-        String nome;
-        double custoHora;
         boolean again = true;
         Projeto projeto = new Projeto();
         Scanner sc = new Scanner(System.in);
         while (again == true){
-            System.out.println("1 - Registrar horas trabalhadas\n2 - Consultar custo do projeto\n3 - Alterar nome\n4 - Alterar custo\n9- Encerrar o programa\n");
+            System.out.println("1 - Registrar horas trabalhadas");
+            System.out.println("2 - Consultar custo do projeto");
+            System.out.println("3 - Alterar nome");
+            System.out.println("4 - Alterar custo");
+            System.out.println("9- Encerrar o programa");
             int opcaoMenu = sc.nextInt();
             sc.nextLine();
             switch (opcaoMenu){
@@ -22,9 +24,13 @@ public class usaProjeto {
                     projeto.registrarHoras(horasTrabalhadas);
                     break;
                 case 2:
-                    System.out.println("O custo das horas trabalhadas é de "+projeto.getCustoAtual());
-                    System.out.println("O nome do projeto é: "+projeto.getNome());
-                    System.out.println("O custo hora é de: "+projeto.getCustoHora());
+                    System.out.println("O custo atual do projeto é: R$"+projeto.getCustoAtual());
+                    if(projeto.getNome() == null || projeto.getNome().equals("")){
+                        System.out.println("Insira um nome pro projeto");
+                    }else{
+                        System.out.println("O nome do projeto é: "+projeto.getNome());
+                    }
+                    System.out.println("O custo hora é de: R$"+projeto.getCustoHora()+"/hora");
                     System.out.println("O total de horas é de: "+projeto.getHoras());
                     break;
                 case 3:
@@ -41,6 +47,8 @@ public class usaProjeto {
                     System.out.println("Você finalizou o programa! :)");
                     again = false;
                     break;
+                default:
+                    System.out.println("Insira um valor valido!");
             }
         }
 
