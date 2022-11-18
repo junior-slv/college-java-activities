@@ -3,7 +3,13 @@ package br.edu.unifil.ling.projeto.view;
 import br.edu.unifil.ling.projeto.model.Projeto;
 
 import java.util.Scanner;
-
+/*  
+    Alunos: 
+    Dirceu Aparecido da Silva Junior
+    Maria Luiza Gonçalves Pereira
+    Walter Hian Oliveira Barroso 
+    Gregório Ramires 
+*/
 public class usaProjeto {
     public static void main(String[] args) {
         boolean again = true;
