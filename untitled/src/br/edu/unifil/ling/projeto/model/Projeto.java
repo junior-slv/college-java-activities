@@ -1,5 +1,11 @@
 package br.edu.unifil.ling.projeto.model;
-
+/*  
+    Alunos: 
+    Dirceu Aparecido da Silva Junior
+    Maria Luiza Gonçalves Pereira
+    Walter Hian Oliveira Barroso 
+    Gregório Ramires 
+*/
 public class Projeto {
     private String nome;
     private double custoHora;
